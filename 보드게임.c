@@ -28,6 +28,8 @@ void main(void)
 
 	while (1)
 	{
+		//엔터키를 눌러서 진행시킴.
+		getchar();
 
 		//주사위는 1 ~ 6 까지 나오게 설정
 		dice = rand() % 6 + 1;
@@ -36,8 +38,11 @@ void main(void)
 		//던진 주사위값은 현재위치에 적용
 		position += dice;
 		printf("현재위치 : %d\n\n", position);
-		getchar();
 
 	}
 
+	if (position > 60)
+	{
+		printf("축하합니다. 목적지에 도착하셨습니다.");
+	}
 }
