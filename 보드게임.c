@@ -26,6 +26,7 @@ void main(void)
 	srand(time(0));
 	printf("현재위치 : %d\n\n", position);
 
+	
 	while (1)
 	{
 		//엔터키를 눌러서 진행시킴.
@@ -39,10 +40,10 @@ void main(void)
 		position += dice;
 		printf("현재위치 : %d\n\n", position);
 
+		if (position > 60)
+		{
+			printf("축하합니다. 목적지에 도착하셨습니다.");
+		}
 	}
 
-	if (position > 60)
-	{
-		printf("축하합니다. 목적지에 도착하셨습니다.");
-	}
 }
