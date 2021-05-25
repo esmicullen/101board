@@ -22,9 +22,11 @@ void main(void)
 	//플레이어의 위치 (0부터 시작)
 	int position = 0;
 	int dice;
+	//돈은 2억부터 시작 더 많은 금액을 담기위해 long long 사용
+	long long money = 200000000;
 
 	srand(time(0));
-	printf("현재위치 : %d\n\n", position);
+	printf("현재위치 : %d, 시작금액 : %lld \n\n ", position,money);
 
 	
 	while (1)
@@ -39,6 +41,13 @@ void main(void)
 		//던진 주사위값은 현재위치에 적용
 		position += dice;
 		printf("현재위치 : %d\n\n", position);
+
+		if (position == 20)
+		{
+			printf("기부천사  - 20번 위치에 있을때 재산의 20%를 기부합니다");
+			money = (long long)(money * 0.8);
+			printf("현재위치 : %d, 현재금액 : %lld \n\n ", position, money);
+		}
 
 		if (position > 60)
 		{
