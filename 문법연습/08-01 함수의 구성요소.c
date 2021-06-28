@@ -1,14 +1,13 @@
 #include <stdio.h>
 
 //두 개의 숫자를 더해서 반환하는 함수
-void sum(int num1, int num2) 
+double sum(int num1, int num2)
 {
-	return num1 + num2;
+	return (double)num1 + num2 + 0.14;
 }
 
 void main(void)
 {
-	int c;
-	c = sum(1, 2);
-	printf("%d\n", c);
+	double a = sum(1, 2);
+	printf("%lf", a);
 }
